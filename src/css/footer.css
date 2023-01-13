@@ -1,0 +1,68 @@
+.footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-color: var(--c-bg-secondary);
+    padding-bottom: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: var(--footer-height)
+}
+
+.footer .copyright {
+    text-align: right;
+    flex: 2;
+    font-size: .8rem;
+    margin-right: 1rem;
+}
+
+.footer .copyright img.cc-logo{
+    height: 22px;
+    margin-left: 3px;
+    vertical-align: text-bottom;
+}
+
+.footer .personal-card {
+    min-width: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch
+}
+
+.footer .personal-card .name {
+    text-align: center;
+    font-weight: 700;
+    margin: 10px
+}
+
+.footer .personal-card .name .prefix {
+    font-weight: 400
+}
+
+.footer .personal-card .links {
+    display: flex;
+    justify-content: space-evenly
+}
+
+.footer .personal-card a {
+    display: block;
+    width: 24px;
+    height: 24px
+}
+
+.footer .personal-card a span {
+    display: none;
+}
+
+
+.footer .personal-card a:hover svg {
+    fill: var(--c-brand-light)
+}
+
+.footer .personal-card a svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--c-brand)
+}
+

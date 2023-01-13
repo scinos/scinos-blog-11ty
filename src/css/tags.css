@@ -1,0 +1,28 @@
+
+.post-tags {
+    text-decoration: none;
+    margin: 0;
+    display: flex;
+    padding: 0;
+    flex: 50%;
+    gap: .5em;
+    font-size: 12pt;
+}
+
+.post-tags li{
+    display: inline;
+}
+
+.post-tags li a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--tag-bg-color);
+    color: var(--tag-color);
+    padding-left: .5em;
+    padding-right: .5em;
+    border-radius: .5em;
+}
+
+.post-tags li:before{
+    /* content:"#" */
+}

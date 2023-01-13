@@ -1,0 +1,98 @@
+.sidebar {
+    width: 300px;
+    background-color: var(--sidebar-bg-color);
+    display: flex;
+    flex-direction: column;
+    position:sticky;
+    top: 0px ;
+    align-self: flex-start;
+    height: 100vh;
+    align-items: stretch;
+}
+
+.sidebar .logo {
+    margin: 1em;
+    margin-bottom: .5em;
+}
+.sidebar .logo .span {
+    flex: 1;
+    display: inline-block;
+}
+.sidebar .logo img {
+    width: 256px;
+    height: 256px;
+}
+
+.sidebar nav {
+    flex: 1;
+}
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 2em;
+}
+.sidebar nav li {
+    margin-bottom: 1em;
+    padding: .5em;
+    padding-right: 1em;
+    text-align: right;
+}
+.sidebar nav li.active {
+    background-color: var(--bg-color);
+}
+
+
+.sidebar .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch
+}
+
+.sidebar .socials .name {
+    text-align: center;
+    font-size: 12pt;
+}
+
+.sidebar .socials .links {
+    display: flex;
+    justify-content: center;
+    margin-top: .5em;
+    gap: .5em;
+}
+
+.sidebar .socials a {
+    display: block;
+    width: 24px;
+    height: 24px
+}
+
+.sidebar .socials a span {
+    display: none;
+}
+
+.sidebar .socials a:hover svg {
+    fill: var(--social-hover-color)
+}
+
+.sidebar .socials a svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--social-color)
+}
+
+
+
+.sidebar .copyright {
+    text-align: center;
+    color: var(--copyright-color);
+    font-size: 10pt;
+    margin-bottom: 1em;
+}
+
+.sidebar .copyright img.cc-logo{
+    height: 22px;
+    margin-left: 3px;
+    vertical-align: text-bottom;
+}
+

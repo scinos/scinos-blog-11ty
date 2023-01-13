@@ -1,0 +1,19 @@
+.content .posts {
+    width: 1200px;
+    position: relative;
+}
+
+.content .posts .post-group {
+    margin-bottom: 2em;
+}
+
+.content .posts .post-group h2{
+    font-size: 24pt;
+    color: var(--color);
+    margin-bottom: 0.25em;
+}
+
+.content .posts .post-group .post-entry {
+    margin-left: 1em;
+    margin-bottom: 1em;
+}

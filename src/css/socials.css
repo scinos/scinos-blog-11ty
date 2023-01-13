@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-color: var(--c-bg-secondary);
+    padding-bottom: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: var(--footer-height)
+}
+
+.footer .copyright {
+    text-align: right;
+    flex: 2;
+    font-size: .8rem;
+    margin-right: 1rem;
+}
+
+.footer .copyright img.cc-logo{
+    height: 22px;
+    margin-left: 3px;
+    vertical-align: text-bottom;
+}
+
