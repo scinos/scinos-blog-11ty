@@ -1,0 +1,37 @@
+on: [push]
+
+jobs:
+    publish:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            deployments: write
+        name: Publish to Cloudflare Pages
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Setup node
+              uses: actions/setup-node@v3
+              with:
+                  node-version-file: '.nvmrc'
+
+            - name: Run install
+              uses: borales/actions-yarn@v4
+              with:
+                  cmd: install
+
+            - name: Build
+              uses: borales/actions-yarn@v4
+              with:
+                  cmd: build
+
+            - name: Publish to Cloudflare Pages
+              uses: cloudflare/pages-action@v1
+              with:
+                  apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+                  accountId: 5879b87b768e4a743f5b79f1ba92d306
+                  projectName: scinos-dev
+                  directory: _site
+                  # Optional: Enable this if you want to have GitHub Deployments triggered
+                  gitHubToken: ${{ secrets.GITHUB_TOKEN }}
