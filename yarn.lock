@@ -5740,43 +5740,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"frontend-ops-11ty@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "frontend-ops-11ty@workspace:."
-  dependencies:
-    "@11ty/eleventy": ^1.0.2
-    "@11ty/eleventy-img": ^2.0.1
-    "@11ty/eleventy-navigation": ^0.3.5
-    "@babel/core": ^7.19.3
-    "@babel/plugin-transform-react-jsx": ^7.19.0
-    "@babel/preset-env": ^7.19.4
-    "@babel/preset-react": ^7.18.6
-    "@babel/register": ^7.18.9
-    "@highlightjs/cdn-assets": ^11.7.0
-    babel-plugin-inline-react-svg: ^2.0.1
-    clean-css: ^5.3.1
-    eleventy-plugin-react-ssr: ^1.0.2
-    esbuild: ^0.15.11
-    eslint: ^8.25.0
-    eslint-config-airbnb: ^19.0.4
-    eslint-config-airbnb-base: ^15.0.0
-    eslint-config-prettier: ^8.5.0
-    eslint-import-resolver-enhanced-resolve: ^1.0.5
-    eslint-plugin-import: ^2.26.0
-    eslint-plugin-jsx-a11y: ^6.6.1
-    eslint-plugin-md: ^1.0.19
-    eslint-plugin-prettier: ^4.2.1
-    eslint-plugin-react: ^7.31.10
-    eslint-plugin-react-hooks: ^4.6.0
-    firebase-tools: ^10.7.2
-    highlight.js: ^11.7.0
-    markdown-it: ^13.0.1
-    prettier: ^2.7.1
-    react: ^18.2.0
-    react-dom: ^18.2.0
-  languageName: unknown
-  linkType: soft
-
 "fs-constants@npm:^1.0.0":
   version: 1.0.0
   resolution: "fs-constants@npm:1.0.0"
@@ -10923,6 +10886,43 @@ __metadata:
   checksum: b777f7ca0115e6d93e126ac490dbd82642d14983b3079f58f35519d992fa46260be7d6e6cede433a92db70306310c6f5f06e144f0e40c484199e09c1f7be53dd
   languageName: node
   linkType: hard
+
+"scinos-blog-11ty@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "scinos-blog-11ty@workspace:."
+  dependencies:
+    "@11ty/eleventy": ^1.0.2
+    "@11ty/eleventy-img": ^2.0.1
+    "@11ty/eleventy-navigation": ^0.3.5
+    "@babel/core": ^7.19.3
+    "@babel/plugin-transform-react-jsx": ^7.19.0
+    "@babel/preset-env": ^7.19.4
+    "@babel/preset-react": ^7.18.6
+    "@babel/register": ^7.18.9
+    "@highlightjs/cdn-assets": ^11.7.0
+    babel-plugin-inline-react-svg: ^2.0.1
+    clean-css: ^5.3.1
+    eleventy-plugin-react-ssr: ^1.0.2
+    esbuild: ^0.15.11
+    eslint: ^8.25.0
+    eslint-config-airbnb: ^19.0.4
+    eslint-config-airbnb-base: ^15.0.0
+    eslint-config-prettier: ^8.5.0
+    eslint-import-resolver-enhanced-resolve: ^1.0.5
+    eslint-plugin-import: ^2.26.0
+    eslint-plugin-jsx-a11y: ^6.6.1
+    eslint-plugin-md: ^1.0.19
+    eslint-plugin-prettier: ^4.2.1
+    eslint-plugin-react: ^7.31.10
+    eslint-plugin-react-hooks: ^4.6.0
+    firebase-tools: ^10.7.2
+    highlight.js: ^11.7.0
+    markdown-it: ^13.0.1
+    prettier: ^2.7.1
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  languageName: unknown
+  linkType: soft
 
 "section-matter@npm:^1.0.0":
   version: 1.0.0

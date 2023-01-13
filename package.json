@@ -1,7 +1,7 @@
 {
-    "name": "frontend-ops-11ty",
+    "name": "scinos-blog-11ty",
     "version": "1.0.0",
-    "description": "Blog with my notes about Frontend ops",
+    "description": "Source of scinos.dev",
     "main": "index.js",
     "author": "Sergio Cinos <sergio.cinos@gmail.com>",
     "license": "MIT",
