@@ -16,15 +16,17 @@ jobs:
               with:
                   node-version-file: '.nvmrc'
 
+            - run: |
+                  corepack enable
+                  yarn --version
+
             - name: Run install
-              uses: borales/actions-yarn@v4
-              with:
-                  cmd: install
+              run: |
+                  yarn install
 
             - name: Build
-              uses: borales/actions-yarn@v4
-              with:
-                  cmd: build
+              run: |
+                  yarn build
 
             - name: Publish to Cloudflare Pages
               uses: cloudflare/pages-action@v1
