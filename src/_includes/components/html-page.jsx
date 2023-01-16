@@ -60,6 +60,12 @@ export function HTMLPage({ children }) {
                         {children}
                     </div>
                 </div>
+
+                <script
+                    defer
+                    src="https://static.cloudflareinsights.com/beacon.min.js"
+                    data-cf-beacon='{"token": "14e2f68d799d458e87d0331508ebf106"}'
+                />
             </body>
         </html>
     );
