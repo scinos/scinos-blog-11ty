@@ -6,11 +6,11 @@ module.exports = {
     ],
 
     urls: {
-        repo: 'https://github.com/scinos/metal-folds-11ty',
+        repo: 'https://github.com/scinos/scinos-blog-11ty/',
         github: 'https://github.com/scinos',
         twitter: 'https://twitter.com/scinos',
         linkedin: 'https://www.linkedin.com/in/sergiocinos/',
-        main: 'https://metalfolds.page',
+        main: 'https://scinos.dev',
         eleventy: 'https://www.11ty.dev/',
     },
 };
