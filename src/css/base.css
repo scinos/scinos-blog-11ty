@@ -1,16 +1,12 @@
 body {
     margin: 0px;
-}
-#page {
-    display: flex;
-    margin: 0px;
     background-color: var(--bg-color);
     color: var(--color);
-    min-height: 100vh;
-
     font-family: 'Alegreya', serif;
     line-height: 1.5;
     font-size: 16pt;
+    overflow: hidden;
+    height: 100vh;
 }
 
 a, a:visited {
@@ -31,10 +27,21 @@ h1 {
     margin-top:0.75rem;
     margin-bottom:0.75rem;
 }
-.content {
+
+#page {
+    display: flex;
+    height: 100%;
+}
+
+main {
+    flex: 1;
+    padding: 2em;
+    overflow: auto;
+}
+
+article {
     min-width: 600px;
     max-width: 1200px;
-    margin: 2em;
 }
 
 code {
@@ -45,3 +52,8 @@ code {
     font-size: 0.75em;
 }
 
+@media (max-width: 700px) {
+    #page {
+      flex-direction: column;
+    }
+  }

@@ -7,15 +7,17 @@ import { Socials } from './socials';
 export function Sidebar() {
     const { siteconfig, page } = useContext(EleventyContext);
     return (
-        <div className="sidebar">
-            <a href="/" className="logo">
-                <img
-                    width="256"
-                    height="256"
-                    src="/img/logo.png"
-                    alt="Funny picture of Sergio Cinos, black and white, finger pointing"
-                />
-            </a>
+        <aside className="sidebar">
+            <div className="logo">
+                <a href="/">
+                    <img
+                        width="256"
+                        height="256"
+                        src="/img/logo.png"
+                        alt="Funny picture of Sergio Cinos, black and white, finger pointing"
+                    />
+                </a>
+            </div>
             <Socials />
             <nav>
                 <ul>
@@ -32,6 +34,6 @@ export function Sidebar() {
                 </ul>
             </nav>
             <Copyright />
-        </div>
+        </aside>
     );
 }

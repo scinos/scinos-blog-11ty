@@ -1,16 +1,14 @@
 .sidebar {
-    width: 300px;
+    display: grid;
+    grid-template-rows: min-content min-content auto min-content;
+    min-width: 300px;
     background-color: var(--sidebar-bg-color);
-    display: flex;
-    flex-direction: column;
-    position:sticky;
-    top: 0px ;
-    align-self: flex-start;
     height: 100vh;
-    align-items: stretch;
 }
 
-.sidebar .logo {
+
+.sidebar .logo > a {
+    display: block;
     margin: 1em;
     margin-bottom: .5em;
 }
@@ -22,26 +20,6 @@
     width: 256px;
     height: 256px;
 }
-
-.sidebar nav {
-    flex: 1;
-}
-.sidebar nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    margin-top: 2em;
-}
-.sidebar nav li {
-    margin-bottom: 1em;
-    padding: .5em;
-    padding-right: 1em;
-    text-align: right;
-}
-.sidebar nav li.active {
-    background-color: var(--bg-color);
-}
-
 
 .sidebar .socials {
     display: flex;
@@ -82,6 +60,28 @@
 }
 
 
+.sidebar nav {
+    flex: 1;
+}
+.sidebar nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    margin-top: 2em;
+}
+.sidebar nav li {
+    margin-bottom: 1em;
+    padding: .5em;
+    padding-right: 1em;
+    text-align: right;
+}
+.sidebar nav li.active {
+    background-color: var(--bg-color);
+}
+
+
 
 .sidebar .copyright {
     text-align: center;
@@ -95,4 +95,68 @@
     margin-left: 3px;
     vertical-align: text-bottom;
 }
+
+@media (max-width: 700px) {
+    body {
+        overflow: auto;
+    }
+    #page {
+        height: auto;
+    }
+    main {
+        overflow: hidden;
+    }
+    .sidebar {
+        grid-template-columns: min-content auto;
+        grid-template-rows: min-content min-content;
+        width: 100%;
+        align-items: end;
+        height: min-content;
+    }
+    .sidebar .logo {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    .sidebar nav {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .sidebar nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 0;
+    }
+    .sidebar nav li {
+        margin-bottom: 0;
+    }
+
+    .sidebar .socials {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: right;
+        align-self: start;
+        padding: .5em;
+    }
+    .sidebar .copyright {
+        display: none;
+        /* grid-column: 2;
+        grid-row: 1;
+        justify-self: right;
+        text-align: right;
+        align-self: start;
+        margin: .25em .25em 0 0; */
+    }
+
+    .sidebar .logo > a {
+        margin: 0.5em;
+        margin-bottom: 0;
+    }
+    .sidebar .logo img {
+        width: 128px;
+        height: 128px;
+    }
+    .sidebar .copyright {
+    }
+  }
 

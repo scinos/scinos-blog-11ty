@@ -55,10 +55,10 @@ export function HTMLPage({ children }) {
             <body>
                 <div id="page">
                     <Sidebar />
-                    <div className="content">
+                    <main className="content">
                         {/* <Navbar /> */}
                         {children}
-                    </div>
+                    </main>
                 </div>
 
                 <script
