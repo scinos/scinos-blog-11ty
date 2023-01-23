@@ -38,10 +38,6 @@ code {
 }
 
 /** List of posts */
-.posts {
-    width: 1200px;
-}
-
 .posts .post-group {
     margin-bottom: 2em;
 }

@@ -22,7 +22,7 @@ h1 {
 main {
     padding: 2em;
     display: block;
-    grid-area: "main";
+    grid-area: main;
     overflow: auto;
 }
 
@@ -33,12 +33,12 @@ article, .content {
 }
 
 .sidebar {
-    grid-area: "sidebar";
+    grid-area: sidebar;
 }
 
 .copyright {
     padding-bottom: 1em;
-    grid-area: "copyright";
+    grid-area: copyright;
 }
 
 .copyright img.cc-logo{
