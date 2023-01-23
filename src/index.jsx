@@ -39,7 +39,7 @@ export default function Page() {
 
     return (
         <HTMLPage>
-            <div className="posts">
+            <div className="posts content">
                 <h1>Blog</h1>
                 {postsByDate
                     .sort((a, b) => b.idx - a.idx)

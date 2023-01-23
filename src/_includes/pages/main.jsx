@@ -9,17 +9,19 @@ function MainLayout() {
 
     return (
         <HTMLPage>
-            <h1
-                className="title"
-                dangerouslySetInnerHTML={{
-                    __html: title,
-                }}
-            />
-            <div
-                dangerouslySetInnerHTML={{
-                    __html: content.replace(`<h1>${title}</h1>`, ''),
-                }}
-            />
+            <div className="content">
+                <h1
+                    className="title"
+                    dangerouslySetInnerHTML={{
+                        __html: title,
+                    }}
+                />
+                <div
+                    dangerouslySetInnerHTML={{
+                        __html: content.replace(`<h1>${title}</h1>`, ''),
+                    }}
+                />
+            </div>
         </HTMLPage>
     );
 }

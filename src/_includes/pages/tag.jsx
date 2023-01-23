@@ -15,7 +15,7 @@ export default function TagLayout() {
 
     return (
         <HTMLPage>
-            <div className="posts">
+            <div className="posts content">
                 <h1>Posts - {tag}</h1>
                 <div className="post-group">
                     {posts.map((post, idx) => (

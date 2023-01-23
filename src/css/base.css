@@ -1,12 +1,9 @@
 body {
-    margin: 0px;
     background-color: var(--bg-color);
     color: var(--color);
     font-family: 'Alegreya', serif;
     line-height: 1.5;
     font-size: 16pt;
-    overflow: hidden;
-    height: 100vh;
 }
 
 a, a:visited {
@@ -19,29 +16,10 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--title-color);
-    /* font-family: 'Oswald', sans-serif; */
 }
 
 h1 {
     font-size: 48pt;
-    margin-top:0.75rem;
-    margin-bottom:0.75rem;
-}
-
-#page {
-    display: flex;
-    height: 100%;
-}
-
-main {
-    flex: 1;
-    padding: 2em;
-    overflow: auto;
-}
-
-article {
-    min-width: 600px;
-    max-width: 1200px;
 }
 
 code {
@@ -52,15 +30,100 @@ code {
     font-size: 0.75em;
 }
 
-@media (max-width: 980px) {
-    #page {
-      flex-direction: column;
-    }
-    main {
-        padding: 0.25em;
-        padding-top: 1em;
-    }
-    article {
-        min-width: 0;
-    }
-  }
+.copyright {
+    text-align: center;
+    color: var(--copyright-color);
+    font-size: 10pt;
+    background-color: var(--sidebar-bg-color);
+}
+
+/** List of posts */
+.posts {
+    width: 1200px;
+}
+
+.posts .post-group {
+    margin-bottom: 2em;
+}
+
+.posts .post-group h2{
+    font-size: 24pt;
+    color: var(--color);
+    margin-bottom: 0.25em;
+}
+
+.posts .post-group .post-entry {
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+
+/** Post entry */
+.post-entry {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.post-entry .post-tags{
+    flex: 100%;
+    margin-top: .5em;
+}
+.post-entry time {
+    min-width: 6em;
+}
+
+/** Post header */
+.post-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.post-header .title {
+    flex: 100%;
+}
+
+.post-header time {
+    flex: 50%;
+    text-align: right;
+}
+
+/** Post */
+article .post-header {
+    border-bottom: 1px solid;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+article pre code {
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 1em;
+}
+
+/** List of tags */
+.post-tags {
+    text-decoration: none;
+    margin: 0;
+    display: flex;
+    padding: 0;
+    flex: 50%;
+    gap: .5em;
+    font-size: 12pt;
+}
+
+.post-tags li{
+    display: inline;
+}
+
+.post-tags li a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--tag-bg-color);
+    color: var(--tag-color);
+    padding-left: .5em;
+    padding-right: .5em;
+    border-radius: .5em;
+}

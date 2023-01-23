@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { useContext } from 'react';
 import EleventyContext from 'eleventy-plugin-react-ssr/context';
-import { Copyright } from './copyright';
 import { Socials } from './socials';
 
 export function Sidebar() {
@@ -33,7 +32,6 @@ export function Sidebar() {
                     })}
                 </ul>
             </nav>
-            <Copyright />
         </aside>
     );
 }

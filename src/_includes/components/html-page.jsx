@@ -1,9 +1,8 @@
 import { useContext } from 'react';
 import EleventyContext from 'eleventy-plugin-react-ssr/context';
 import { Sidebar } from './sidebar';
-// import { Navbar } from './navbar';
-// import { Footer } from './footer';
 import { InlineStyle } from './inline-style';
+import { Copyright } from './copyright';
 
 export function HTMLPage({ children }) {
     const { title, eleventy } = useContext(EleventyContext);
@@ -34,20 +33,13 @@ export function HTMLPage({ children }) {
                 <InlineStyle
                     styles={[
                         '../../css/vars.css',
+                        '../../css/layout.css',
                         '../../css/base.css',
-                        '../../css/index.css',
-                        '../../css/tags.css',
-                        '../../css/post.css',
                         '../../css/sidebar.css',
-                        '../../css/post-entry.css',
-                        '../../css/footer.css',
-                        '../../css/post-header.css',
+                        '../../css/responsive.css',
                         require.resolve(
                             'highlight.js/styles/base16/solarized-dark.css'
                         ),
-                        // '../../css/navbar.css',
-                        // '../../css/gallery.css',
-                        // '../../css/footer.css',
                     ]}
                 />
             </head>
@@ -55,10 +47,8 @@ export function HTMLPage({ children }) {
             <body>
                 <div id="page">
                     <Sidebar />
-                    <main className="content">
-                        {/* <Navbar /> */}
-                        {children}
-                    </main>
+                    <main>{children}</main>
+                    <Copyright />
                 </div>
 
                 <script

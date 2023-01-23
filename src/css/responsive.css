@@ -1,0 +1,65 @@
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 32pt;
+    }
+    body {
+        overflow: auto;
+    }
+    #page {
+        min-height: 100%;
+        height: auto;
+        grid-template-columns: auto;
+        grid-template-rows: min-content 1fr min-content;
+        grid-template-areas: "sidebar" "main" "copyright";
+    }
+    main {
+        overflow: hidden;
+        padding: 0.5em;
+    }
+    article, .content {
+        height: 100%;
+        min-width: 0;
+    }
+    .copyright {
+        padding: 1em;
+    }
+
+    .sidebar {
+        grid-template-columns: min-content auto;
+        grid-template-rows: min-content min-content;
+        width: 100%;
+        align-items: end;
+        height: min-content;
+    }
+    .sidebar .logo {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+    .sidebar .logo > a {
+        margin: 0.5em;
+        margin-bottom: 0;
+    }
+    .sidebar .logo img {
+        width: 128px;
+        height: 128px;
+    }
+    .sidebar nav {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .sidebar nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 0;
+    }
+    .sidebar nav li {
+        margin-bottom: 0;
+    }
+    .sidebar .socials {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: right;
+        align-self: start;
+        padding: .5em;
+    }
+  }

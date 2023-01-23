@@ -10,7 +10,7 @@ function PostLayout() {
 
     return (
         <HTMLPage>
-            <article className="post">
+            <article className="post content">
                 <PostHeader date={page.date} title={title} tags={tags} />
                 <div
                     dangerouslySetInnerHTML={{
