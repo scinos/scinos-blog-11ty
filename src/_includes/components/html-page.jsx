@@ -54,7 +54,7 @@ export function HTMLPage({ children }) {
                 <script
                     defer
                     src="https://static.cloudflareinsights.com/beacon.min.js"
-                    data-cf-beacon='{"token": "14e2f68d799d458e87d0331508ebf106"}'
+                    data-cf-beacon='{"token": "135284d3896f4e52b3f318670ce9ca4f"}'
                 />
             </body>
         </html>
