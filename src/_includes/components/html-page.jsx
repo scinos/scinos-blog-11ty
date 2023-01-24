@@ -50,12 +50,6 @@ export function HTMLPage({ children }) {
                     <main>{children}</main>
                     <Copyright />
                 </div>
-
-                <script
-                    defer
-                    src="https://static.cloudflareinsights.com/beacon.min.js"
-                    data-cf-beacon='{"token": "135284d3896f4e52b3f318670ce9ca4f"}'
-                />
             </body>
         </html>
     );
