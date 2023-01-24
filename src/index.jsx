@@ -7,7 +7,7 @@ import { HTMLPage } from './_includes/components/html-page';
 import { PostEntry } from './_includes/components/post-entry';
 
 export default function Page() {
-    const { collections } = useContext(EleventyContext);
+    const { collections, title } = useContext(EleventyContext);
 
     const formatter = new Intl.DateTimeFormat('en-US', {
         month: 'short',
@@ -40,7 +40,7 @@ export default function Page() {
     return (
         <HTMLPage>
             <div className="posts content">
-                <h1>Blog</h1>
+                <h1>{title}</h1>
                 {postsByDate
                     .sort((a, b) => b.idx - a.idx)
                     .map(({ time, posts }, idx) => (
@@ -62,3 +62,7 @@ export default function Page() {
         </HTMLPage>
     );
 }
+
+Page.data = {
+    title: 'Blog',
+};

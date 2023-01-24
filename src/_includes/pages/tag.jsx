@@ -7,7 +7,7 @@ import { HTMLPage } from '../components/html-page';
 import { PostEntry } from '../components/post-entry';
 
 export default function TagLayout() {
-    const { collections, tag } = useContext(EleventyContext);
+    const { collections, tag, title } = useContext(EleventyContext);
 
     const posts = collections.posts
         .filter((post) => post.data.tags.includes(tag))
@@ -16,7 +16,7 @@ export default function TagLayout() {
     return (
         <HTMLPage>
             <div className="posts content">
-                <h1>Posts - {tag}</h1>
+                <h1>{title}</h1>
                 <div className="post-group">
                     {posts.map((post, idx) => (
                         <PostEntry

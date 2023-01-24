@@ -1,5 +1,6 @@
 ---
 layout: 'pages/main.jsx'
+title: Projects
 ---
 
 # Projects
