@@ -9,6 +9,7 @@ export function InlineStyle({ styles = [] }) {
     const cleanCss = new CleanCSS({ level: 2 }).minify(fullStyle);
     return (
         <style
+            // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
                 __html: cleanCss.styles,
             }}

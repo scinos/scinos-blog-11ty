@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import EleventyContext from 'eleventy-plugin-react-ssr/context';
+import stripTags from 'striptags';
 import { Sidebar } from './sidebar';
 import { InlineStyle } from './inline-style';
 import { Copyright } from './copyright';
@@ -12,7 +13,7 @@ export function HTMLPage({ children }) {
         <html lang="en">
             <head>
                 <meta charSet="utf-8" />
-                <title>{title}</title>
+                <title>{stripTags(title)}</title>
                 <meta name="generator" content={generator} />
                 <meta
                     name="viewport"
