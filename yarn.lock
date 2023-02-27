@@ -24,16 +24,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy-img@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "@11ty/eleventy-img@npm:2.0.1"
+"@11ty/eleventy-img@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@11ty/eleventy-img@npm:3.0.0"
   dependencies:
     "@11ty/eleventy-fetch": ^3.0.0
-    debug: ^4.3.3
-    image-size: ^1.0.1
+    debug: ^4.3.4
+    entities: ^4.4.0
+    image-size: ^1.0.2
     p-queue: ^6.6.2
-    sharp: ^0.30.3
-  checksum: d19e939f7cea16b5543fadf5bac95fe82364572daa4866180ea3e04d8407fb59bec719497df32624cc33822538ed2e93bda38ca71f38e84c60edfac03cb2a0e6
+    sharp: ^0.31.3
+  checksum: f204b3ab65021a1028531743ff5b8218d5a19acd3381e3c9e29d721be7542874fc88b351206649bb2f9944d99c4f75057cd53288dfbf75904e86849e222e9ca8
   languageName: node
   linkType: hard
 
@@ -4511,6 +4512,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"entities@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "entities@npm:4.4.0"
+  checksum: b7971419897622d3996bbbff99249e166caaaf3ea95d3841d6dc5d3bf315f133b649fbe932623e3cc527d871112e7563a8284e24f23e472126aa90c4e9c3215b
+  languageName: node
+  linkType: hard
+
 "entities@npm:~2.1.0":
   version: 2.1.0
   resolution: "entities@npm:2.1.0"
@@ -6554,7 +6562,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"image-size@npm:^1.0.1":
+"image-size@npm:^1.0.2":
   version: 1.0.2
   resolution: "image-size@npm:1.0.2"
   dependencies:
@@ -11034,7 +11042,7 @@ __metadata:
   resolution: "scinos-blog-11ty@workspace:."
   dependencies:
     "@11ty/eleventy": ^1.0.2
-    "@11ty/eleventy-img": ^2.0.1
+    "@11ty/eleventy-img": ^3.0.0
     "@11ty/eleventy-navigation": ^0.3.5
     "@babel/core": ^7.20.12
     "@babel/plugin-transform-react-jsx": 7.20.7
@@ -11111,7 +11119,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.0.0, semver@npm:^7.1.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.7":
+"semver@npm:^7.0.0, semver@npm:^7.1.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.7, semver@npm:^7.3.8":
   version: 7.3.8
   resolution: "semver@npm:7.3.8"
   dependencies:
@@ -11247,20 +11255,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:^0.30.3":
-  version: 0.30.7
-  resolution: "sharp@npm:0.30.7"
+"sharp@npm:^0.31.3":
+  version: 0.31.3
+  resolution: "sharp@npm:0.31.3"
   dependencies:
     color: ^4.2.3
     detect-libc: ^2.0.1
     node-addon-api: ^5.0.0
     node-gyp: latest
     prebuild-install: ^7.1.1
-    semver: ^7.3.7
+    semver: ^7.3.8
     simple-get: ^4.0.1
     tar-fs: ^2.1.1
     tunnel-agent: ^0.6.0
-  checksum: dc38dceb1daba47523d237b7e05c629f1f2973468a116eb817a4b0456fca20f58bbe393060e79ba32071127434a90592d8946b89be483555e074f8f907b3891b
+  checksum: 22cab24b7145546f25cd5e2a27841880405335ddeeb4e05be6e32d4221baac4fd89d0fb31c397a0cea31b6f1b6b139d4eb49d036cdba1f33175ffa0b1a4eccfc
   languageName: node
   linkType: hard
 
