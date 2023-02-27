@@ -165,7 +165,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.17.10, @babel/core@npm:^7.20.12":
+"@babel/core@npm:^7.17.10, @babel/core@npm:^7.21.0":
   version: 7.21.0
   resolution: "@babel/core@npm:7.21.0"
   dependencies:
@@ -10441,7 +10441,7 @@ __metadata:
     "@11ty/eleventy": ^2.0.0
     "@11ty/eleventy-img": ^3.0.0
     "@11ty/eleventy-navigation": ^0.3.5
-    "@babel/core": ^7.20.12
+    "@babel/core": ^7.21.0
     "@babel/preset-env": ^7.20.2
     "@babel/preset-react": ^7.18.6
     "@highlightjs/cdn-assets": ^11.7.0
