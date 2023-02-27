@@ -3368,12 +3368,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clean-css@npm:^5.3.1":
-  version: 5.3.1
-  resolution: "clean-css@npm:5.3.1"
+"clean-css@npm:^5.3.2":
+  version: 5.3.2
+  resolution: "clean-css@npm:5.3.2"
   dependencies:
     source-map: ~0.6.0
-  checksum: c8e111c8e3af09fea50e93870eddcdb82fb2df3e00ff56a41d64a8707285a9a1c4e7121fa4223599f004bb97ee48b50fbf13d8c0f3cf9cc7ca7af08f1bd2a511
+  checksum: 315e0e81306524bd2c1905fa6823bf7658be40799b78f446e5e6922808718d2b80266fb3e96842a06176fa683bc2c1a0d2827b08d154e2f9cf136d7bda909d33
   languageName: node
   linkType: hard
 
@@ -11043,7 +11043,7 @@ __metadata:
     "@babel/register": ^7.18.9
     "@highlightjs/cdn-assets": ^11.7.0
     babel-plugin-inline-react-svg: ^2.0.2
-    clean-css: ^5.3.1
+    clean-css: ^5.3.2
     eleventy-plugin-react-ssr: ^1.0.2
     esbuild: ^0.16.17
     eslint: ^8.31.0
