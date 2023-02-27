@@ -1,6 +1,7 @@
 {
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": ["config:base"],
     "rangeStrategy": "bump",
     "masterIssue": true,
-    "postUpdateOptions": "yarnDedupeHighest"
+    "postUpdateOptions": ["yarnDedupeHighest"]
 }
