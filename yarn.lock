@@ -1776,6 +1776,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@playwright/test@npm:^1.31.2":
+  version: 1.31.2
+  resolution: "@playwright/test@npm:1.31.2"
+  dependencies:
+    "@types/node": "*"
+    fsevents: 2.3.2
+    playwright-core: 1.31.2
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    playwright: cli.js
+  checksum: 244ef2c6121d9ac100d59f586a2ba6c6ce8bf9a0f8953770ed8d35de18e76e4df6870543dcddb91fb3459b72f9cdb73d169d4401b2a7197dd83b89fe478bcdac
+  languageName: node
+  linkType: hard
+
 "@pnpm/network.ca-file@npm:^1.0.1":
   version: 1.0.2
   resolution: "@pnpm/network.ca-file@npm:1.0.2"
@@ -5224,7 +5240,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@npm:~2.3.2":
+"fsevents@npm:2.3.2, fsevents@npm:~2.3.2":
   version: 2.3.2
   resolution: "fsevents@npm:2.3.2"
   dependencies:
@@ -5234,7 +5250,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
+"fsevents@patch:fsevents@2.3.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
   resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
   dependencies:
@@ -8480,6 +8496,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"playwright-core@npm:1.31.2":
+  version: 1.31.2
+  resolution: "playwright-core@npm:1.31.2"
+  bin:
+    playwright: cli.js
+  checksum: 532b16d5d1d9b1cee2ba97685e5a63bb73a148b17648bdd74bbe097323f36f8918caabcd1073f84745e782bed3b7fdb7aa006453cd6e3fa732b13fc33d29f68b
+  languageName: node
+  linkType: hard
+
 "please-upgrade-node@npm:^3.2.0":
   version: 3.2.0
   resolution: "please-upgrade-node@npm:3.2.0"
@@ -10184,6 +10209,7 @@ __metadata:
     "@babel/preset-env": ^7.20.2
     "@babel/preset-react": ^7.18.6
     "@highlightjs/cdn-assets": ^11.7.0
+    "@playwright/test": ^1.31.2
     babel-plugin-inline-react-svg: ^2.0.2
     clean-css: ^5.3.2
     eleventy-plugin-react-ssr: ^1.0.2

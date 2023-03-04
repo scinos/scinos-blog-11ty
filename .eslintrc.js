@@ -52,6 +52,7 @@ module.exports = {
         indent: ['error', 4],
         'no-plusplus': 'off',
         'no-cond-assign': 'off',
+        'no-restricted-syntax': 'off',
         'import/no-extraneous-dependencies': [
             'error',
             { devDependencies: true },
