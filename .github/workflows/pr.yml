@@ -1,0 +1,41 @@
+on:
+    push:
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    tests:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            deployments: write
+        name: Validate changes
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Setup node
+              uses: actions/setup-node@v3
+              with:
+                  node-version-file: '.nvmrc'
+
+            - run: |
+                  corepack enable
+                  yarn --version
+
+            - name: Run install
+              run: |
+                  yarn install
+
+            - name: Lint
+              run: |
+                  yarn lint
+
+            - name: Build
+              run: |
+                  yarn build
+
+            - name: Take screenshots
+              run: |
+                  yarn screenshots
