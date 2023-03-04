@@ -38,4 +38,5 @@ jobs:
 
             - name: Take screenshots
               run: |
+                  yarn playwright install --with-deps
                   yarn screenshots
