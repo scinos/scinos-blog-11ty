@@ -35,7 +35,7 @@ jobs:
 
             - name: Install browsers
               run: |
-                  yarn playwright install --with-deps
+                  yarn playwright install --with-deps chromium
 
             - name: Take screenshots
               run: |
