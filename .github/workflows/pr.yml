@@ -1,8 +1,5 @@
 on:
     push:
-    pull_request:
-        branches:
-            - main
 
 jobs:
     tests:
@@ -36,7 +33,10 @@ jobs:
               run: |
                   yarn build
 
-            - name: Take screenshots
+            - name: Install browsers
               run: |
                   yarn playwright install --with-deps
+
+            - name: Take screenshots
+              run: |
                   yarn screenshots
