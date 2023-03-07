@@ -5008,9 +5008,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"firebase-tools@npm:^11.24.0":
-  version: 11.24.0
-  resolution: "firebase-tools@npm:11.24.0"
+"firebase-tools@npm:^11.24.1":
+  version: 11.24.1
+  resolution: "firebase-tools@npm:11.24.1"
   dependencies:
     "@google-cloud/pubsub": ^3.0.1
     abort-controller: ^3.0.0
@@ -5074,7 +5074,7 @@ __metadata:
     ws: ^7.2.3
   bin:
     firebase: lib/bin/firebase.js
-  checksum: d76b7ec6416a6031d3cc26fe7c9aad574f189db801ceea1e7749375e73219fd96f04f6aab6c42896a1147294c9fc6474800251807cb8f9a756b78c4e04244124
+  checksum: b10bf50812217bafcd3ec881ffa8d5e960d1c26fdae37bd8cdee96231967ee20b0b5389e4501f86371cbedaa47ff0bf1dd086d9e6e3d45725e8c88a19444d6e7
   languageName: node
   linkType: hard
 
@@ -10198,7 +10198,7 @@ __metadata:
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-react: ^7.32.2
     eslint-plugin-react-hooks: ^4.6.0
-    firebase-tools: ^11.24.0
+    firebase-tools: ^11.24.1
     highlight.js: ^11.7.0
     markdown-it: ^13.0.1
     prettier: ^2.8.4
