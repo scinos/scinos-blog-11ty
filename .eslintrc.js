@@ -47,6 +47,13 @@ module.exports = {
         {
             files: ['*.jsx'],
         },
+        {
+            files: ['*.md.js'],
+            rules: {
+                'no-unused-vars': 'off',
+                'no-console': 'off',
+            },
+        },
     ],
     rules: {
         indent: ['error', 4],
