@@ -3,7 +3,7 @@ tags:
   - yarn
 ---
 
-# Mastering Yarn's lifecycle with custom hooks
+# Mastering Yarn's lifecycle with hooks
 
 Yarn is a powerful package manager for Node.js projects that comes with a rich set of features, including support for
 plugins (starting with Yarn 2.x).
@@ -112,8 +112,8 @@ module.exports = {
                         // https://github.com/yarnpkg/berry/blob/master/packages/yarnpkg-core/sources/Plugin.ts#L144
                         //
                         // After some trial an error, I found that MessageName is _mandatory_ and a it must be a Number.
-                        // It will be used to generate an error code like YN0099. As far as I know there is no recommendation
-                        // of what error codes we should use for our custom errors.
+                        // It will be used to generate an error code like YN0099. As far as I know there is no
+                        // recommendation about what error codes we should use for our custom errors.
                         report.reportError(99, "NODE_OPTIONS is not set");
                         return;
                     }
