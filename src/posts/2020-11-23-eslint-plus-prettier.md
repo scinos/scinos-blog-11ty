@@ -3,6 +3,13 @@ tags:
   - eslint
   - prettier
   - linting
+description: >
+  Learn how to integrate ESLint and Prettier in this post! While these tools may seem to overlap, they each serve unique
+  purposes: use Prettier to enforce consistent formatting and ESLint to catch bugs. By running Prettier inside ESLint,
+  you can take advantage of all of ESLint's features and avoid any confusion that may arise from running both
+  separately. This post provides step-by-step instructions for installation and configuration, as well as tips for
+  avoiding conflicts with ESLint rules. Improve your code's consistency and catch more bugs with this ESLint + Prettier
+  setup!
 ---
 
 # Part I: ESLint + Prettier

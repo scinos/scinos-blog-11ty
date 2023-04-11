@@ -1,6 +1,11 @@
 ---
 tags:
   - yarn
+description:
+  Learn how to create custom Yarn plugins and take your Node.js package management to the next level. In this tutorial,
+  you will master Yarn's lifecycle hooks by creating a plugin that checks whether the environment is correctly set up.
+  Whether you're a beginner or an experienced developer, this tutorial will equip you with the knowledge you need to
+  create your own Yarn plugins.
 ---
 
 # Mastering Yarn's lifecycle with hooks

@@ -2,6 +2,12 @@
 tags:
   - eslint
   - linting
+description:
+  Learn how to use ESLint to enforce consistent code style, best practices, and prevent dangerous patterns beyond just
+  JavaScript and TypeScript. With its plugin system, you can easily extend ESLint to integrate with other tools like
+  Prettier or even lint Markdown files. This post series will guide you through setting up ESLint with Prettier, linting
+  Markdown files, and configuring VSCode for an optimized development experience. Follow along to improve your code
+  quality and save time with automatic fixes.
 ---
 
 # ESLint all the things!

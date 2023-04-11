@@ -2,6 +2,10 @@
 tags:
   - opinion
   - software_engineering
+description:
+  Learn how to prioritize problems effectively with this post. Instead of jumping straight into finding solutions,
+  consider if the problem is worth fixing, if it's the root issue, if it's urgent, and if it's best for your team to
+  tackle. Ask yourself, "Do we have to fix this problem now?" to ensure you make the best use of your finite resources.
 ---
 
 # Do we have to fix this problem now?

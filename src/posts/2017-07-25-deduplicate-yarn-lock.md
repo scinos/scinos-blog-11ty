@@ -2,6 +2,11 @@
 tags:
   - yarn
   - package_management
+description:
+  Yarn is a great tool with lots of great features, but not everything is peaches and cream, as it is prone to package
+  duplication. This can cause your dependencies to take longer to install and increase the size of your bundle if you're
+  serving them to a browser. In this post, you'll learn how to use yarn-deduplicate, a tool to help you identify and
+  resolve those duplicated dependencies.
 ---
 
 # De-duplicating `yarn.lock`

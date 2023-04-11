@@ -4,6 +4,11 @@ tags:
   - markdown
   - prettier
   - linting
+description: >
+  This post explains how to use ESLint to validate Markdown files. ESLint can be used to enforce consistent formatting
+  and linting rules on Markdown, which is useful for ensuring that titles are not duplicated, lists are consistent,
+  etc.The post also covers rule configuration, including how to customize rules and disable them directly from Markdown
+  files. Finally, it explains how to use ESLint to lint fenced code blocks tagged as js or javascript.
 ---
 
 # Part II: ESLint for Markdown
