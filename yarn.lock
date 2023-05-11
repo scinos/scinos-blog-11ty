@@ -1499,10 +1499,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@highlightjs/cdn-assets@npm:^11.7.0":
-  version: 11.7.0
-  resolution: "@highlightjs/cdn-assets@npm:11.7.0"
-  checksum: 69c34570e761eecb3ea8413b93c1886b83fe6f0d62b2617ea39d8dc211b79458dd3f46f96936fa2ac784f2912f88399e99905643a1613392df60c3e3a3492dd5
+"@highlightjs/cdn-assets@npm:^11.8.0":
+  version: 11.8.0
+  resolution: "@highlightjs/cdn-assets@npm:11.8.0"
+  checksum: 176eb85c7020a9fb6fcce164c6a2b2cd7384e7c82773d24b528c4b3848dba5e1c03e553da4031017219cb296dcec19db755b226afffa61fb5053b8fe69780313
   languageName: node
   linkType: hard
 
@@ -6922,7 +6922,7 @@ __metadata:
     "@babel/core": ^7.21.0
     "@babel/preset-env": ^7.20.2
     "@babel/preset-react": ^7.18.6
-    "@highlightjs/cdn-assets": ^11.7.0
+    "@highlightjs/cdn-assets": ^11.8.0
     babel-plugin-inline-react-svg: ^2.0.2
     clean-css: ^5.3.2
     eleventy-plugin-react-ssr: ^1.0.2
