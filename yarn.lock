@@ -12,9 +12,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy-dev-server@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "@11ty/eleventy-dev-server@npm:1.0.3"
+"@11ty/eleventy-dev-server@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "@11ty/eleventy-dev-server@npm:1.0.4"
   dependencies:
     "@11ty/eleventy-utils": ^1.0.1
     chokidar: ^3.5.3
@@ -22,14 +22,14 @@ __metadata:
     dev-ip: ^1.0.1
     finalhandler: ^1.2.0
     mime: ^3.0.0
-    minimist: ^1.2.7
-    morphdom: ^2.6.1
+    minimist: ^1.2.8
+    morphdom: ^2.7.0
     please-upgrade-node: ^3.2.0
     ssri: ^8.0.1
-    ws: ^8.12.0
+    ws: ^8.13.0
   bin:
     eleventy-dev-server: cmd.js
-  checksum: c12ecdf2582c993c269b915f02c5955142499154f5aa08340a08f53f32d2884ac895aa7c7045058cbe2a5c6e77304793394752300f314388d2eb75df7f180589
+  checksum: f71ad3e09964223b6b2496cefd680c34e395ac2db13eba7be8cdee5de67790969e08a34c951c2c9db48faf11eac8a85b5256c8d5f9bb86b2e97d0ad8f1b1b4cb
   languageName: node
   linkType: hard
 
@@ -51,13 +51,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@11ty/eleventy@npm:2.0.0"
+"@11ty/eleventy@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@11ty/eleventy@npm:2.0.1"
   dependencies:
     "@11ty/dependency-tree": ^2.0.1
-    "@11ty/eleventy-dev-server": ^1.0.3
+    "@11ty/eleventy-dev-server": ^1.0.4
     "@11ty/eleventy-utils": ^1.0.1
+    "@11ty/lodash-custom": ^4.17.21
     "@iarna/toml": ^2.2.5
     "@sindresorhus/slugify": ^1.1.2
     bcp-47-normalize: ^1.1.1
@@ -65,23 +66,20 @@ __metadata:
     cross-spawn: ^7.0.3
     debug: ^4.3.4
     dependency-graph: ^0.11.0
-    ejs: ^3.1.8
+    ejs: ^3.1.9
     fast-glob: ^3.2.12
-    graceful-fs: ^4.2.10
+    graceful-fs: ^4.2.11
     gray-matter: ^4.0.3
     hamljs: ^0.6.2
     handlebars: ^4.7.7
     is-glob: ^4.0.3
     iso-639-1: ^2.1.15
     kleur: ^4.1.5
-    liquidjs: ^10.4.0
-    lodash.chunk: ^4.2.0
-    lodash.get: ^4.4.2
-    lodash.set: ^4.3.2
-    luxon: ^3.2.1
+    liquidjs: ^10.7.0
+    luxon: ^3.3.0
     markdown-it: ^13.0.1
     micromatch: ^4.0.5
-    minimist: ^1.2.7
+    minimist: ^1.2.8
     moo: ^0.5.2
     multimatch: ^5.0.0
     mustache: ^4.2.0
@@ -94,10 +92,17 @@ __metadata:
     pug: ^3.0.2
     recursive-copy: ^2.0.14
     semver: ^7.3.8
-    slugify: ^1.6.5
+    slugify: ^1.6.6
   bin:
     eleventy: cmd.js
-  checksum: 979aaaa6ce71deba5bdf4953de15faa7cc8c232dc2131f4dfc0dfa47ac11645047c8aa4ba9089e5b66dafe5f3a0c183ce981ba177eb576a2d06b26bee51ad82a
+  checksum: 75b65a25d7a3459a691495dec40ffa2901eb57cef669a6d112e1c81223bf6b8765d2909df0f54abd934009f20a45d6721844f5180aee439f629afcd6abe4debe
+  languageName: node
+  linkType: hard
+
+"@11ty/lodash-custom@npm:^4.17.21":
+  version: 4.17.21
+  resolution: "@11ty/lodash-custom@npm:4.17.21"
+  checksum: 947b1a90cd46723e6a7f0c3e74734a933b75a1e35cfc3ad0138fe1f6be3eab914cc1a1e0926d9a05d5b0aece5dc74977312fb8d8af1beea4044d011148ecc196
   languageName: node
   linkType: hard
 
@@ -2774,14 +2779,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ejs@npm:^3.1.8":
-  version: 3.1.8
-  resolution: "ejs@npm:3.1.8"
+"ejs@npm:^3.1.9":
+  version: 3.1.9
+  resolution: "ejs@npm:3.1.9"
   dependencies:
     jake: ^10.8.5
   bin:
     ejs: bin/cli.js
-  checksum: a6bd58633c5b3ae19a2bfea1b94033585ad85c87ec15961f8c89c93ffdafb8b2358af827f37f7552b35d9f5393fdbd98d35a8cbcd0ee2540b7f9f7a194e86a1a
+  checksum: f0e249c79128810f5f6d5cbf347fc906d86bb9384263db0b2a9004aea649f2bc2d112736de5716c509c80afb4721c47281bd5b57c757d3b63f1bf5ac5f885893
   languageName: node
   linkType: hard
 
@@ -3844,10 +3849,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.1.4, graceful-fs@npm:^4.2.10, graceful-fs@npm:^4.2.4, graceful-fs@npm:^4.2.6":
-  version: 4.2.10
-  resolution: "graceful-fs@npm:4.2.10"
-  checksum: 4223a833e38e1d0d2aea630c2433cfb94ddc07dfc11d511dbd6be1d16688c5be848acc31f9a5d0d0ddbfb56d2ee5a6ae0278aceeb0ca6a13f27e06b9956fb952
+"graceful-fs@npm:^4.1.4, graceful-fs@npm:^4.2.11, graceful-fs@npm:^4.2.4, graceful-fs@npm:^4.2.6":
+  version: 4.2.11
+  resolution: "graceful-fs@npm:4.2.11"
+  checksum: 386d011a553e02bc594ac2ca0bd6d9e4c22d7fa8cfbfc448a6d148c59ea881b092db9dbe3547ae4b88e55f1b01f7c4a2ecc53b310c042793e63aa44cf6c257f2
   languageName: node
   linkType: hard
 
@@ -4714,15 +4719,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"liquidjs@npm:^10.4.0":
-  version: 10.6.0
-  resolution: "liquidjs@npm:10.6.0"
+"liquidjs@npm:^10.7.0":
+  version: 10.7.1
+  resolution: "liquidjs@npm:10.7.1"
   dependencies:
     commander: ^10.0.0
   bin:
     liquid: bin/liquid.js
     liquidjs: bin/liquid.js
-  checksum: f60fddd954fcc8040d5b52731c348d66f21d0950c711083a27586000adca6663240adbb715ecb80aaaa50a3bd3596761e86d4e5b207555ee8f29b29eab31aa26
+  checksum: d72e144e118ebba1204a7a9319a839caf559457c65e148652e469e4612d0b40fd574040570c2c3fa6049af090278d43790af94b103f4f3e1471d431407358fb8
   languageName: node
   linkType: hard
 
@@ -4752,13 +4757,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.chunk@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "lodash.chunk@npm:4.2.0"
-  checksum: f9f99969561ad2f62af1f9a96c5bd0af776f000292b0d8db3126c28eb3b32e210d7c31b49c18d0d7901869bd769057046dc134b60cfa0c2c4ce017823a26bb23
-  languageName: node
-  linkType: hard
-
 "lodash.debounce@npm:^4.0.8":
   version: 4.0.8
   resolution: "lodash.debounce@npm:4.0.8"
@@ -4773,13 +4771,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.get@npm:^4.4.2":
-  version: 4.4.2
-  resolution: "lodash.get@npm:4.4.2"
-  checksum: 48f40d471a1654397ed41685495acb31498d5ed696185ac8973daef424a749ca0c7871bf7b665d5c14f5cc479394479e0307e781f61d5573831769593411be6e
-  languageName: node
-  linkType: hard
-
 "lodash.isplainobject@npm:^4.0.6":
   version: 4.0.6
   resolution: "lodash.isplainobject@npm:4.0.6"
@@ -4791,13 +4782,6 @@ __metadata:
   version: 4.6.2
   resolution: "lodash.merge@npm:4.6.2"
   checksum: 402fa16a1edd7538de5b5903a90228aa48eb5533986ba7fa26606a49db2572bf414ff73a2c9f5d5fd36b31c46a5d5c7e1527749c07cbcf965ccff5fbdf32c506
-  languageName: node
-  linkType: hard
-
-"lodash.set@npm:^4.3.2":
-  version: 4.3.2
-  resolution: "lodash.set@npm:4.3.2"
-  checksum: c641d31905e51df43170dce8a1d11a1cff11356e2e2e75fe2615995408e9687d58c3e1d64c3c284c2df2bc519f79a98af737d2944d382ff82ffd244ff6075c29
   languageName: node
   linkType: hard
 
@@ -4851,10 +4835,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:^3.2.1":
-  version: 3.2.1
-  resolution: "luxon@npm:3.2.1"
-  checksum: 2edd1400c7a785b01fa24ab491675c490a763054e0e147507b7b64caa6caad50329b48d482300c7ab5dc1a2630aaf84997496ffe7d2e166f9ea223f6caa719d9
+"luxon@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "luxon@npm:3.3.0"
+  checksum: 47f8e1e96b25441c799b8aa833b3f007fb1854713bcffc8c3384eda8e61fc9af1f038474d137274d2d386492f341c8a8c992fc78c213adfb3143780feba2776c
   languageName: node
   linkType: hard
 
@@ -5037,7 +5021,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.2.0, minimist@npm:^1.2.5, minimist@npm:^1.2.6, minimist@npm:^1.2.7":
+"minimist@npm:^1.2.0, minimist@npm:^1.2.5, minimist@npm:^1.2.6, minimist@npm:^1.2.8":
   version: 1.2.8
   resolution: "minimist@npm:1.2.8"
   checksum: 19d3fcdca050087b84c2029841a093691a91259a47def2f18222f41e7645a0b7c44ef4b40e88a1e58a40c84d2ef0ee6047c55594d298146d0eb3f6b737c20ce6
@@ -5150,7 +5134,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"morphdom@npm:^2.6.1":
+"morphdom@npm:^2.7.0":
   version: 2.7.0
   resolution: "morphdom@npm:2.7.0"
   checksum: 02609c62d13cf5d7a9becf89f63345df9fa5cc66cc4e3b5774f2e7245002838eff97518781cb01c0789cab603b957700efec3613194bea503e9b81f58e919a9b
@@ -6929,7 +6913,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "scinos-blog-11ty@workspace:."
   dependencies:
-    "@11ty/eleventy": ^2.0.0
+    "@11ty/eleventy": ^2.0.1
     "@11ty/eleventy-navigation": ^0.3.5
     "@babel/core": ^7.21.8
     "@babel/preset-env": ^7.21.5
@@ -7095,10 +7079,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slugify@npm:^1.6.5":
-  version: 1.6.5
-  resolution: "slugify@npm:1.6.5"
-  checksum: 264059d9ea7aa95e472e66d19a1042ea54c75d3f60096c2cc57af4d66c6fb6ac1d8b4672326f276f52574fac489f59cb08848bfb97e44291c7e45211acb2b185
+"slugify@npm:^1.6.6":
+  version: 1.6.6
+  resolution: "slugify@npm:1.6.6"
+  checksum: e7e63f08f389a371d6228bc19d64ec84360bf0a538333446cc49dbbf3971751a6d180d2f31551188dd007a65ca771e69f574e0283290a7825a818e90b75ef44d
   languageName: node
   linkType: hard
 
@@ -7920,9 +7904,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.12.0":
-  version: 8.12.1
-  resolution: "ws@npm:8.12.1"
+"ws@npm:^8.13.0":
+  version: 8.13.0
+  resolution: "ws@npm:8.13.0"
   peerDependencies:
     bufferutil: ^4.0.1
     utf-8-validate: ">=5.0.2"
@@ -7931,7 +7915,7 @@ __metadata:
       optional: true
     utf-8-validate:
       optional: true
-  checksum: 63e3382263616ca469bf13053d1f5693d040ef191d1050097c7c0e4a910efa1c36a8f749ca9e2901723cc2b59641bdc94a45859bbca65e8363ca741f30673b35
+  checksum: 579817dbbab3ee46669129c220cfd81ba6cdb9ab5c3e9a105702dd045743c4ab72e33bb384573827c0c481213417cc880e41bc097e0fc541a0b79fa3eb38207d
   languageName: node
   linkType: hard
 
