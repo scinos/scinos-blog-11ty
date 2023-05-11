@@ -4100,10 +4100,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"highlight.js@npm:^11.7.0":
-  version: 11.7.0
-  resolution: "highlight.js@npm:11.7.0"
-  checksum: dea760e130a5655b617e69ebb3a03a1012c9566857b85318e4e2201ee0fc0b83eaf77ee4f2bc59515ae4cde8df718283be21299cad0b951d94ad6866afe9d551
+"highlight.js@npm:^11.8.0":
+  version: 11.8.0
+  resolution: "highlight.js@npm:11.8.0"
+  checksum: ab48cb4fa2b0bc8bc897a129dc498e5df4ec0ca7c699299d22fafb8883e3bb4c81626b896214f94627fccdadbe46eabab6afc8f7ce36a55bd2164b9aa1b3c2c6
   languageName: node
   linkType: hard
 
@@ -7252,7 +7252,7 @@ __metadata:
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-react: ^7.32.2
     eslint-plugin-react-hooks: ^4.6.0
-    highlight.js: ^11.7.0
+    highlight.js: ^11.8.0
     markdown-it: ^13.0.1
     prettier: ^2.8.4
     react: ^18.2.0
