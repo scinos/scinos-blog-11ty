@@ -6,7 +6,7 @@
     "author": "Sergio Cinos <sergio.cinos@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "@11ty/eleventy": "^2.0.0",
+        "@11ty/eleventy": "^2.0.1",
         "@11ty/eleventy-navigation": "^0.3.5",
         "@babel/core": "^7.21.8",
         "@babel/preset-env": "^7.21.5",
@@ -14,7 +14,7 @@
         "@highlightjs/cdn-assets": "^11.8.0",
         "babel-plugin-inline-react-svg": "^2.0.2",
         "clean-css": "^5.3.2",
-        "eleventy-plugin-react-ssr": "^1.0.2",
+        "eleventy-plugin-react-ssr": "^1.0.3",
         "eslint": "^8.40.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-airbnb-base": "^15.0.0",
