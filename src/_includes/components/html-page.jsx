@@ -31,7 +31,7 @@ export function HTMLPage({ children }) {
                     crossOrigin="true"
                 />
                 <link
-                    href="https://fonts.googleapis.com/css2?family=Alegreya&family=Oswald&display=swap"
+                    href="https://fonts.googleapis.com/css2?family=Alegreya&family=Fira+Code&family=Oswald&display=swap"
                     rel="stylesheet"
                 />
 

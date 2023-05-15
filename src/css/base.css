@@ -6,6 +6,10 @@ body {
     font-size: 16pt;
 }
 
+code {
+    font-family: 'Fira Code', monospace;
+}
+
 a, a:visited {
     color: var(--title-color);
     text-decoration: none;
