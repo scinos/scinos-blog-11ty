@@ -216,3 +216,6 @@ Temporary Items
 # .pnp.*
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,osx,node,yarn
+/test-results/
+/playwright-report/
+/playwright/.cache/

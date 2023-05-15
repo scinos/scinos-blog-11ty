@@ -1,4 +1,4 @@
-const { test } = require('@playwright/test');
+const { test, expect } = require('@playwright/test');
 
 const SERVER = 'http://localhost:8080';
 
@@ -12,10 +12,7 @@ const runTests = ({ pathPrefix }) => {
     for (const [name, path] of Object.entries(paths)) {
         test(`${name}`, async ({ page }) => {
             await page.goto(`${SERVER}${path}`);
-            await page.screenshot({
-                path: `tests/screenshots/${pathPrefix}/${name}.png`,
-                fullPage: true,
-            });
+            await expect(page).toHaveScreenshot([pathPrefix, `${name}.png`]);
         });
     }
 };
