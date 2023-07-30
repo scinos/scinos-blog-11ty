@@ -28,7 +28,7 @@ order. I do remember many
 There were some proto-package-managers (mostly small bash scripts) that were trying to atuomate the process of
 downloading scripts and keep them up-to-date. As far as I know, no one catched up. Until Bower.
 
-# Bower
+## Bower
 
 Bower was released in 2012 by Twitter. While this was released years after NPM, my feeling is that most web projects
 adopted Bower before using NPM. This is probably because NPM wasn't mature enought back then.
