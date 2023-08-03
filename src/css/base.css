@@ -1,9 +1,23 @@
 body {
     background-color: var(--bg-color);
     color: var(--color);
-    font-family: 'Alegreya', serif;
+    font-family: 'Alegreya Sans', serif;
+    font-weight: 300;
+
     line-height: 1.5;
     font-size: 16pt;
+}
+
+
+.content {
+    font-family: 'Alegreya Sans', serif;
+    font-weight: 300;
+}
+
+strong {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: var(--solarized-green);;
 }
 
 code {
@@ -19,6 +33,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: 'Alegreya', serif;
     color: var(--title-color);
 }
 
@@ -90,6 +105,8 @@ code {
 }
 
 /** Post */
+
+
 article .post-header {
     border-bottom: 1px solid;
     padding-bottom: 1em;
@@ -122,11 +139,14 @@ article pre code {
     text-decoration: none;
     display: inline-block;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    /* background-color: var(--tag-bg-color); */
     box-shadow: 1em;
     border: 1px solid var(--tag-bg-color);
     color: var(--tag-color);
     padding-left: .5em;
     padding-right: .5em;
     border-radius: .5em;
+}
+
+.footnotes-sep {
+    display: none;
 }

@@ -42,6 +42,7 @@ module.exports = {
                             ['lint-maximum-line-length', 120],
                             ['lint-emphasis-marker', false],
                             ['lint-list-item-indent', 'space'],
+                            ['lint-no-shortcut-reference-link', false],
                         ],
                     },
                 ],

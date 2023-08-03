@@ -4915,6 +4915,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"markdown-it-footnote@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "markdown-it-footnote@npm:3.0.3"
+  checksum: b765a47720dbabd76f8b9379de4c4ac5a7963fff6a0f509f081955f0e7e338255410befadabf028b084883858b1f0fff11469bfa19a6521f096fb1d3734b4a74
+  languageName: node
+  linkType: hard
+
 "markdown-it@npm:^13.0.1":
   version: 13.0.1
   resolution: "markdown-it@npm:13.0.1"
@@ -6968,6 +6975,7 @@ __metadata:
     eslint-plugin-react-hooks: ^4.6.0
     highlight.js: ^11.8.0
     markdown-it: ^13.0.1
+    markdown-it-footnote: ^3.0.3
     prettier: ^2.8.8
     react: ^18.2.0
     react-dom: ^18.2.0

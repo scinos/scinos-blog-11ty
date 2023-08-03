@@ -2,10 +2,11 @@ const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const CleanCSS = require('clean-css');
 const path = require('path');
 const eleventyJsxPlugin = require('eleventy-plugin-react-ssr');
-const MarkdownIt = require('markdown-it');
+const markdownIt = require('markdown-it');
+const markdownFootNote = require('markdown-it-footnote');
 const hljs = require('highlight.js');
 
-const md = new MarkdownIt({
+const mdOptions = {
     html: true,
     breaks: false,
     highlight: function (str, lang) {
@@ -21,7 +22,8 @@ const md = new MarkdownIt({
 
         return `<pre><code class="language-${lang} hljs">${content}</code></pre>`;
     },
-});
+};
+const md = markdownIt(mdOptions).use(markdownFootNote);
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('cssmin', function (code) {
@@ -46,7 +48,7 @@ module.exports = function (eleventyConfig) {
         const posts = collectionApi.getFilteredByGlob('./src/posts/**/*.md');
 
         posts.forEach((post) => {
-            const postTokens = md.parse(post.template.frontMatter.content);
+            const postTokens = md.parse(post.template.frontMatter.content, {});
             const headingTokenIndex = postTokens.findIndex(
                 (token) => token.type === 'heading_open' && token.tag === 'h1'
             );
