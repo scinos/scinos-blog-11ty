@@ -155,15 +155,20 @@ doesn't quite justify the tradeoffs right now.
 
 ## Updates
 
+<!--lint disable code-block-style-->
+
 [^1]:
     I've tried Yarn 4.0 (`4.0.0-rc.48.git.20230729.hash-8d70543` to be more specific) and the results are very similar
     (in fact, a bit slower than Yarn v3):
+
     ![Results of running yarn (v4) install 10 times with hyperfine. Mean time is 21.041 s ±0.250 s](/img/posts/yarn-vs-bun/image-7.png)
 
 [^2]:
     In reality "2x faster" or "twice as fast" figure is very misleading. In this test `postinstall` and `prepare`
     scripts were disabled, but that's not realistic as the repo won't work unlees those scripts are executed. If I
-    enable those scripts, then installation times are aprox. 40s vs 50s. Bun is still 10 seconds faster, but that's not
+    enable those scripts, then installation times are aprox. 40s vs 50s. Bun is still 10 seconds faster, but it is not
     "twice as fast" anymore.
 
 [^3]: I've been told by Jarred Sumner (Bun author) that the difference is most likely caused by the manifest cache.
+
+<!--lint enable code-block-style-->
