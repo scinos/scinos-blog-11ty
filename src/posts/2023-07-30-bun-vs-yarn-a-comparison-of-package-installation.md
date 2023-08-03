@@ -25,14 +25,17 @@ Disclaimer: I have my reservations about Bun (generally disliking all-in-one app
 consider it the best package manager for Node.js overall. Despite this preference, I aimed for an unbiased comparison. I
 expect Bun to perform faster for several reasons, including its simplicity and use of [Zig](https://ziglang.org/).
 
+**Update**: After getting feedback from both Yarn and Bun communities (thanks!), I've updated some results. Updates are
+at the end of the blogpost, in the form of footnotes.
+
 ## Setup
 
 I selected the existing medium-large project [Automattic/wp-calypso](https://github.com/Automattic/wp-calypso) for this
 test. With 97 packages and roughly 3000 external dependencies, it provided a comprehensive testing ground. It's open
 source, so anybody can replicate these tests.
 
-I ran the tests on an MBP M1 Max using Bun 0.6.15 and Yarn 3.6.1, simulating a fresh install with a warm network cache.
-In other words, I'm comparing `yarn install` vs `bun install` with clean `node_modules`.
+I ran the tests on an MBP M1 Max using Bun 0.6.15 and Yarn 3.6.1[^1], simulating a fresh install with a warm network
+cache. In other words, I'm comparing `yarn install` vs `bun install` with clean `node_modules`.
 
 ## Preparation
 
@@ -109,8 +112,8 @@ make them behave similary, and used `hyperfine` to run the tests.
 
 ## Results
 
-Yarn mean time is **19.536s**, while Bun mean time is **9.616s**, so it is 10 seconds fater (or about 2x faster). A few
-notes:
+Yarn mean time is **19.536s**, while Bun mean time is **9.616s**, so it is 10 seconds fater (or about ~~2x
+faster~~[^2]). A few notes:
 
 - Despite all my efforts, this is still not comparing apples to apples. I couldn't reuse Bun lockfile beetween runs, and
   the resolution bugs means the dependency trees are not exactly the same. Yarn provides more features at install time
@@ -121,6 +124,7 @@ notes:
   while subsequent runs took ~9 seconds, indicating some persistent caching. Whithout knowing more about this cache and
   how it will behave on CI, I can't tell which figure (14s or 9s) is more correct. I'll update the post once I know more
   ([relevant question in their Discord server](https://discord.com/channels/876711213126520882/1135079573462188062))
+  (see [^3])
 
 - Deleting `bun.lockb` is wrong, as it should be persisted in the repo like `yarn.lock`. However, because the issue
   described above, it's a neecesary workaround right now. I don't now how this affect Bun performance, but I imagine Bun
@@ -142,7 +146,24 @@ notes:
 
 ## Conclusion
 
-Personal opinion: In a project of this size, Bun is roughly twice as fast as Yarn (very far from the 30x claim in the
-oficial docs), and it could likely become even faster once certain issues are resolved. However, given the existing bugs
-and the functionality that's missing compared to Yarn, I believe that the speed improvement doesn't quite justify the
-tradeoffs right now.
+Personal opinion: In a project of this size, Bun is roughly ~~twice as fast~~ 10 seconds faster than Yarn (very far from
+the 30x claim in the oficial docs), and it could likely become even faster once certain issues are resolved. However,
+given the existing bugs and the functionality that's missing compared to Yarn, I believe that the speed improvement
+doesn't quite justify the tradeoffs right now.
+
+---
+
+## Updates
+
+[^1]:
+    I've tried Yarn 4.0 (`4.0.0-rc.48.git.20230729.hash-8d70543` to be more specific) and the results are very similar
+    (in fact, a bit slower than Yarn v3):
+    ![Results of running yarn (v4) install 10 times with hyperfine. Mean time is 21.041 s ±0.250 s](/img/posts/yarn-vs-bun/image-7.png)
+
+[^2]:
+    In reality "2x faster" or "twice as fast" figure is very misleading. In this test `postinstall` and `prepare`
+    scripts were disabled, but that's not realistic as the repo won't work unlees those scripts are executed. If I
+    enable those scripts, then installation times are aprox. 40s vs 50s. Bun is still 10 seconds faster, but that's not
+    "twice as fast" anymore.
+
+[^3]: I've been told by Jarred Sumner (Bun author) that the difference is most likely caused by the manifest cache.
