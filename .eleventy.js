@@ -3,7 +3,8 @@ const CleanCSS = require('clean-css');
 const path = require('path');
 const eleventyJsxPlugin = require('eleventy-plugin-react-ssr');
 const markdownIt = require('markdown-it');
-const markdownFootNote = require('markdown-it-footnote');
+const markdownAnchor = require('markdown-it-anchor');
+
 const hljs = require('highlight.js');
 
 const mdOptions = {
@@ -23,14 +24,18 @@ const mdOptions = {
         return `<pre><code class="language-${lang} hljs">${content}</code></pre>`;
     },
 };
-const md = markdownIt(mdOptions).use(markdownFootNote);
+const mdParser = markdownIt(mdOptions);
+const mdRenderer = markdownIt(mdOptions).use(markdownAnchor, {
+    permalink: markdownAnchor.permalink.headerLink(),
+    level: 2,
+});
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('cssmin', function (code) {
         return new CleanCSS({}).minify(code).styles;
     });
 
-    eleventyConfig.setLibrary('md', md);
+    eleventyConfig.setLibrary('md', mdRenderer);
 
     eleventyConfig.addWatchTarget('src/css');
 
@@ -48,7 +53,10 @@ module.exports = function (eleventyConfig) {
         const posts = collectionApi.getFilteredByGlob('./src/posts/**/*.md');
 
         posts.forEach((post) => {
-            const postTokens = md.parse(post.template.frontMatter.content, {});
+            const postTokens = mdParser.parse(
+                post.template.frontMatter.content,
+                {}
+            );
             const headingTokenIndex = postTokens.findIndex(
                 (token) => token.type === 'heading_open' && token.tag === 'h1'
             );
@@ -58,7 +66,7 @@ module.exports = function (eleventyConfig) {
                 );
             }
             const titleToken = postTokens[headingTokenIndex + 1];
-            post.data.title = md.renderer.render([titleToken], {});
+            post.data.title = mdRenderer.renderer.render([titleToken], {});
         });
         return posts;
     });

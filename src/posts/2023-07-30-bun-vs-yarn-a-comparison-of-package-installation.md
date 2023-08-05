@@ -25,8 +25,11 @@ Disclaimer: I have my reservations about Bun (generally disliking all-in-one app
 consider it the best package manager for Node.js overall. Despite this preference, I aimed for an unbiased comparison. I
 expect Bun to perform faster for several reasons, including its simplicity and use of [Zig](https://ziglang.org/).
 
-**Update**: After getting feedback from both Yarn and Bun communities (thanks!), I've updated some results. Updates are
-at the end of the blogpost, in the form of footnotes.
+## TLDR
+
+Bun 0.6.5 is ~10 seconds faster than Yarn 3.6.1 (`9.616s` vs `19.536s`)
+
+**Update 2023/08/05**: Bun 0.7.3 is ~11 seconds faster than Yarn v3 or Yarn v4 (`8.482s` vs `19.536s`)
 
 ## Setup
 
@@ -34,8 +37,9 @@ I selected the existing medium-large project [Automattic/wp-calypso](https://git
 test. With 97 packages and roughly 3000 external dependencies, it provided a comprehensive testing ground. It's open
 source, so anybody can replicate these tests.
 
-I ran the tests on an MBP M1 Max using Bun 0.6.15 and Yarn 3.6.1[^1], simulating a fresh install with a warm network
-cache. In other words, I'm comparing `yarn install` vs `bun install` with clean `node_modules`.
+I ran the tests on an MBP M1 Max using Bun 0.6.15 and Yarn 3.6.1 (see [updates](#updates) for comparison with more
+recent versions), simulating a fresh install with a warm network cache. In other words, I'm comparing `yarn install` vs
+`bun install` with clean `node_modules`.
 
 ## Preparation
 
@@ -80,7 +84,7 @@ anyone attempting a similar transition:
 - **Bun lock file**: Bun has a bug where it doesn't work if you have a lock file (`bun.lockb`) in a monorepo with linked
   packages, and you delete `node_modules` ([issue](https://github.com/oven-sh/bun/issues/3685)). I had to delete
   `bun.lockb` between runs (otherwise it doesn't work). It probably affects installation times, but I'm not able to
-  verify it until the issue is resolved.
+  verify it until the issue is resolved (update: [it has been fixed](#2024%2F08%2F07)).
 
 - **Wrong semver resoution**: There is a couple of bugs in Bun that affect which versions are used to satisfy semver
   ranges. This causes the dependency trees between Yarn and Bun to not be exactly the same:
@@ -112,8 +116,8 @@ make them behave similary, and used `hyperfine` to run the tests.
 
 ## Results
 
-Yarn mean time is **19.536s**, while Bun mean time is **9.616s**, so it is 10 seconds fater (or about ~~2x
-faster~~[^2]). A few notes:
+Yarn mean time is **19.536s**, while Bun mean time is **9.616s**, so it is 10 seconds fater (or about ~~2x faster~~ see
+[updates](#2024%2F08%2F06)). A few notes:
 
 - Despite all my efforts, this is still not comparing apples to apples. I couldn't reuse Bun lockfile beetween runs, and
   the resolution bugs means the dependency trees are not exactly the same. Yarn provides more features at install time
@@ -124,12 +128,12 @@ faster~~[^2]). A few notes:
   while subsequent runs took ~9 seconds, indicating some persistent caching. Whithout knowing more about this cache and
   how it will behave on CI, I can't tell which figure (14s or 9s) is more correct. I'll update the post once I know more
   ([relevant question in their Discord server](https://discord.com/channels/876711213126520882/1135079573462188062))
-  (see [^3])
+  (update: [question solved](#2024%2F08%2F06))
 
 - Deleting `bun.lockb` is wrong, as it should be persisted in the repo like `yarn.lock`. However, because the issue
   described above, it's a neecesary workaround right now. I don't now how this affect Bun performance, but I imagine Bun
   will get faster once I don't have to delete it. I'll update the post once the
-  [issue](https://github.com/oven-sh/bun/issues/3685) is fixed.
+  [issue](https://github.com/oven-sh/bun/issues/3685) is fixed. (Update: [it has been fixed](#2024%2F08%2F07))
 
 - Yarn will show information about missing peer dependencies when running `yarn install`, which is something Bun
   ignores. I believe this is a critical issue for a healthy dependency tree, and I hope Bun implements it eventually.
@@ -146,29 +150,39 @@ faster~~[^2]). A few notes:
 
 ## Conclusion
 
-Personal opinion: In a project of this size, Bun is roughly ~~twice as fast~~ 10 seconds faster than Yarn (very far from
-the 30x claim in the oficial docs), and it could likely become even faster once certain issues are resolved. However,
-given the existing bugs and the functionality that's missing compared to Yarn, I believe that the speed improvement
-doesn't quite justify the tradeoffs right now.
+Personal opinion: In a project of this size, Bun is roughly 10 seconds faster than Yarn (very far from the 30x claim in
+the oficial docs), and it could likely become even faster once certain issues are resolved. However, given the existing
+bugs and the functionality that's missing compared to Yarn, I believe that the speed improvement doesn't quite justify
+the tradeoffs right now.
 
 ---
 
 ## Updates
 
-<!--lint disable code-block-style-->
+### 2024/08/05
 
-[^1]:
-    I've tried Yarn 4.0 (`4.0.0-rc.48.git.20230729.hash-8d70543` to be more specific) and the results are very similar
-    (in fact, a bit slower than Yarn v3):
+I've tried Yarn 4.0 (`4.0.0-rc.48.git.20230729.hash-8d70543` to be more specific) and the results are very similar (in
+fact, a bit slower than Yarn v3):
 
-    ![Results of running yarn (v4) install 10 times with hyperfine. Mean time is 21.041 s ±0.250 s](/img/posts/yarn-vs-bun/image-7.png)
+![Results of running yarn (v4) install 10 times with hyperfine. Mean time is 21.041 s ±0.250 s](/img/posts/yarn-vs-bun/image-7.png)
 
-[^2]:
-    In reality "2x faster" or "twice as fast" figure is very misleading. In this test `postinstall` and `prepare`
-    scripts were disabled, but that's not realistic as the repo won't work unlees those scripts are executed. If I
-    enable those scripts, then installation times are aprox. 40s vs 50s. Bun is still 10 seconds faster, but it is not
-    "twice as fast" anymore.
+I've been seen some confusion around the "2x faster" statement. It is wrong because "2x faster" hints there is a linear
+relationship between Yarn and Bun install times, but that is not correct. With a single datapoint we don't know if it s
+"always twice as fast", or "always 10 second slower" or something else.
 
-[^3]: I've been told by Jarred Sumner (Bun author) that the difference is most likely caused by the manifest cache.
+It's worth mentioning that, in this test, `postinstall` and `prepare` scripts were disabled. That is ok for the test,
+but is a not good indicator of real-life performance because without those scripts, the repo just won't work (as in,
+some tooling will be missing). When I enabled those scripts, the installation times are aprox 40s vs 50s. Bun is still
+faster, but not "2x faster".
 
-<!--lint enable code-block-style-->
+### 2024/08/06
+
+I've been told by Jarred Sumner (Bun author) that the difference between Bun runs (9s vs 14s) is most likely caused by
+the manifest cache.
+
+### 2024/08/07
+
+The bug with `bun.lockb` has been fixed in Bun 0.7.3. Now I can run the test persisting `bun.lockb` between runs. The
+results are:
+
+![Results of running bun install 10 times with hyperfine and Bun 0.7.3. Mean time is 8.482 s ±0.148 s](/img/posts/yarn-vs-bun/image-8.png)

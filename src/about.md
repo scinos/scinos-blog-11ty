@@ -1,6 +1,5 @@
 ---
 layout: 'pages/main.jsx'
-title: About
 ---
 
 # About
