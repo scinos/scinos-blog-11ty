@@ -31,6 +31,8 @@ Bun 0.6.5 is ~10 seconds faster than Yarn 3.6.1 (`9.616s` vs `19.536s`)
 
 **Update 2023/08/05**: Bun 0.7.3 is ~11 seconds faster than Yarn v3 or Yarn v4 (`8.482s` vs `19.536s`)
 
+**Update 2023/08/08**: In Linux, Bun 0.7.3 is ~52 seconds faster than Yarn v3 (`7.868s` vs `60.374s`)
+
 ## Setup
 
 I selected the existing medium-large project [Automattic/wp-calypso](https://github.com/Automattic/wp-calypso) for this
@@ -155,6 +157,13 @@ the oficial docs), and it could likely become even faster once certain issues ar
 bugs and the functionality that's missing compared to Yarn, I believe that the speed improvement doesn't quite justify
 the tradeoffs right now.
 
+**Update 2023/08/08**: The story is quite different in Linux (and therefore, in CI agents). There, Bun is much faster
+(50 seconds faster). It's a very interesting trade-off, becuase shaving almost 1 minute from CI is huge (specially in
+projects with a high change frequency), but it's hard to let go the correctness that Yarn brings to the table with the
+analysis of missing peer dependencies. Maybe the ideal setup is to have a separate CI test with Yarn just to test for
+correctness, but that means in practice maintaing two separate configurations and the risks of them drifting apart with
+time.
+
 ---
 
 ## Updates
@@ -186,3 +195,28 @@ The bug with `bun.lockb` has been fixed in Bun 0.7.3. Now I can run the test per
 results are:
 
 ![Results of running bun install 10 times with hyperfine and Bun 0.7.3. Mean time is 8.482 s ±0.148 s](/img/posts/yarn-vs-bun/image-8.png)
+
+### 2024/08/08
+
+As requested by Yarn and Bun community, I run the tests on Linux. It's not a very powerful computer though: an Intel NUC
+7CJYHN with a dual-core Intel Celeron, 8Gb RAM and a cheap SSD.
+
+It's worth mentioning that both package managers provide different ways to create files in `node_modules`, mainly using
+hardlinks or copying files ([Yarn docs](https://yarnpkg.com/configuration/yarnrc#nmMode),
+[Bun docs](https://github.com/oven-sh/bun/blob/main/docs/cli/bun-install.md#platform-specific-backends)). Different
+modes have different performance characteristics, so I decided to test all of them:
+
+- Yarn v3:
+
+![Results of running yarn install with Yarn v3. Fastest backend is hardlinks-global, with a mean time of 60.374 s ±2.282 s](/img/posts/yarn-vs-bun/image-9.png)
+
+- Bun v0.7.3:
+
+![Results of running bun install with Bun v0.7.3. Fastest backend is clonefile, with a mean time of 7.868s ±2.625 s](/img/posts/yarn-vs-bun/image-10.png)
+
+An in-depth analysis of each mode is off-topic for this post (but something I'd like to investigate in the future). In a
+nutshell, Yarn's `hardlinks-global` and Bun's `clonefile` use hardlinks to link each package in `node_modules` from a
+central location (respectively, `.yarn/berry/cache/` and `.bun/install/cache/`), so the approaches are equivalent.
+
+Interstingly, Bun docs says `clonefile` is only available in MacOS, but doesn't seem to be the case (at least I didn't
+get any error). Nevertheless, Bun is **much** faster than Yarn in Linux (60.374s vs 7.868s).
