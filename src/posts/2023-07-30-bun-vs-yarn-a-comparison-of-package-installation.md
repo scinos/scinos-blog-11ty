@@ -41,7 +41,7 @@ source, so anybody can replicate these tests.
 
 I ran the tests on an MBP M1 Max using Bun 0.6.15 and Yarn 3.6.1 (see [updates](#updates) for comparison with more
 recent versions), simulating a fresh install with a warm network cache. In other words, I'm comparing `yarn install` vs
-`bun install` with clean `node_modules`.
+`bun install` with clean `node_modules`. I'm using Node 18.13.0 with `NODE_OPTIONS=--max-old-space-size=12288`.
 
 ## Preparation
 
@@ -168,7 +168,7 @@ time.
 
 ## Updates
 
-### 2024/08/05
+### 2023/08/05
 
 I've tried Yarn 4.0 (`4.0.0-rc.48.git.20230729.hash-8d70543` to be more specific) and the results are very similar (in
 fact, a bit slower than Yarn v3):
@@ -184,22 +184,23 @@ but is a not good indicator of real-life performance because without those scrip
 some tooling will be missing). When I enabled those scripts, the installation times are aprox 40s vs 50s. Bun is still
 faster, but not "2x faster".
 
-### 2024/08/06
+### 2023/08/06
 
 I've been told by Jarred Sumner (Bun author) that the difference between Bun runs (9s vs 14s) is most likely caused by
 the manifest cache.
 
-### 2024/08/07
+### 2023/08/07
 
 The bug with `bun.lockb` has been fixed in Bun 0.7.3. Now I can run the test persisting `bun.lockb` between runs. The
 results are:
 
 ![Results of running bun install 10 times with hyperfine and Bun 0.7.3. Mean time is 8.482 s ±0.148 s](/img/posts/yarn-vs-bun/image-8.png)
 
-### 2024/08/08
+### 2023/08/08
 
 As requested by Yarn and Bun community, I run the tests on Linux. It's not a very powerful computer though: an Intel NUC
-7CJYHN with a dual-core Intel Celeron, 8Gb RAM and a cheap SSD.
+7CJYHN with a dual-core Intel Celeron, 8Gb RAM and a cheap SSD. I'm still using Node 18.13.0 with
+`NODE_OPTIONS=--max-old-space-size=2048`
 
 It's worth mentioning that both package managers provide different ways to create files in `node_modules`, mainly using
 hardlinks or copying files ([Yarn docs](https://yarnpkg.com/configuration/yarnrc#nmMode),
