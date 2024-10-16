@@ -1722,19 +1722,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@playwright/test@npm:^1.36.2":
-  version: 1.36.2
-  resolution: "@playwright/test@npm:1.36.2"
+"@playwright/test@npm:^1.48.1":
+  version: 1.48.1
+  resolution: "@playwright/test@npm:1.48.1"
   dependencies:
-    "@types/node": "*"
-    fsevents: 2.3.2
-    playwright-core: 1.36.2
-  dependenciesMeta:
-    fsevents:
-      optional: true
+    playwright: 1.48.1
   bin:
     playwright: cli.js
-  checksum: b56ce2e5a1a45c0a497428163d4ee99e4a3b005472d70244deef239cda847832f44cb9fb38baa2e61600ff5ff8a9443264e658084128613d5c45afe2bb7c4141
+  checksum: 32cedc3b2d375cb8f4a830bc820d7726b0235be7a6202e1d6ee46e739b83666271c47c100c11311cf5a916468c18e6a4dc526accf9ef090786e7614c2633b2b8
   languageName: node
   linkType: hard
 
@@ -1783,13 +1778,6 @@ __metadata:
   version: 3.0.5
   resolution: "@types/minimatch@npm:3.0.5"
   checksum: a1a19ba342d6f39b569510f621ae4bbe972dc9378d15e9a5e47904c440ee60744f5b09225bc73be1c6490e3a9c938eee69eb53debf55ce1f15761201aa965f97
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:*":
-  version: 20.1.4
-  resolution: "@types/node@npm:20.1.4"
-  checksum: 696ed2619db9a4b07635fca8c8194bf4c356a3aed9612ada03ab1a1b43a7c1de2817771ee1390b0018971c302ace442ad650eed41cab22b64467645897b384e8
   languageName: node
   linkType: hard
 
@@ -6015,12 +6003,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright-core@npm:1.36.2":
-  version: 1.36.2
-  resolution: "playwright-core@npm:1.36.2"
+"playwright-core@npm:1.48.1":
+  version: 1.48.1
+  resolution: "playwright-core@npm:1.48.1"
   bin:
     playwright-core: cli.js
-  checksum: 2ef6f69475f650f39e1d4cf409af5aeeaf1e50eeea1b27c73b990e5e845082cce66e8d85c117ea60c4a8ee879400c3ab347e49ce987564c1fad85472dd2e18ca
+  checksum: 2f75532b9b7dfa0e586f5660ac1d8ea729bbdbd28dd2c0711e7cfc1adfe5cf7448d7f15a018ec9851a8f50c0743c3990cb9df23064bed603627baeac4dce3915
+  languageName: node
+  linkType: hard
+
+"playwright@npm:1.48.1":
+  version: 1.48.1
+  resolution: "playwright@npm:1.48.1"
+  dependencies:
+    fsevents: 2.3.2
+    playwright-core: 1.48.1
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    playwright: cli.js
+  checksum: 96280ae656226e52015c0c69c4c19e9f594c19353a79012a19bd7b7175d7b409c1aed289a629df49ef897a57ccd24668ad15b86c283db10f76212a4db90a94ac
   languageName: node
   linkType: hard
 
@@ -7331,7 +7334,7 @@ __metadata:
     "@babel/preset-env": ^7.22.9
     "@babel/preset-react": ^7.22.5
     "@highlightjs/cdn-assets": ^11.8.0
-    "@playwright/test": ^1.36.2
+    "@playwright/test": ^1.48.1
     babel-plugin-inline-react-svg: ^2.0.2
     clean-css: ^5.3.2
     eleventy-plugin-react-ssr: ^1.0.3
