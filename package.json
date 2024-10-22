@@ -8,9 +8,9 @@
     "devDependencies": {
         "@11ty/eleventy": "^2.0.1",
         "@11ty/eleventy-navigation": "^0.3.5",
-        "@babel/core": "^7.22.9",
-        "@babel/preset-env": "^7.22.9",
-        "@babel/preset-react": "^7.22.5",
+        "@babel/core": "^7.25.9",
+        "@babel/preset-env": "^7.25.9",
+        "@babel/preset-react": "^7.25.9",
         "@highlightjs/cdn-assets": "^11.8.0",
         "@playwright/test": "^1.36.2",
         "babel-plugin-inline-react-svg": "^2.0.2",
