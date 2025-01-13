@@ -14,7 +14,7 @@
         "@highlightjs/cdn-assets": "^11.8.0",
         "@playwright/test": "^1.36.2",
         "babel-plugin-inline-react-svg": "^2.0.2",
-        "clean-css": "^5.3.2",
+        "clean-css": "^5.3.3",
         "eleventy-plugin-react-ssr": "^1.0.3",
         "eslint": "^8.46.0",
         "eslint-config-airbnb": "^19.0.4",
