@@ -5202,9 +5202,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdown-it@npm:^13.0.1":
-  version: 13.0.1
-  resolution: "markdown-it@npm:13.0.1"
+"markdown-it@npm:^13.0.1, markdown-it@npm:^13.0.2":
+  version: 13.0.2
+  resolution: "markdown-it@npm:13.0.2"
   dependencies:
     argparse: ^2.0.1
     entities: ~3.0.1
@@ -5213,7 +5213,7 @@ __metadata:
     uc.micro: ^1.0.5
   bin:
     markdown-it: bin/markdown-it.js
-  checksum: 3e21f9782cc5c7af55d0c822b1d938fb918ad3397653dee746a33ad6a245fb31068fcc5f719e66ebc579d01dd47ea9e3e019c398650e592d7ce5e613147f4f1d
+  checksum: 4fe0c41bc4c318c2901dc2923470c259cab137a4ab870001038877b942c9cc65072923e2d957f785de69a9da27c55657bd531607ccfd258246bd72a8deb8c2ee
   languageName: node
   linkType: hard
 
@@ -7347,7 +7347,7 @@ __metadata:
     eslint-plugin-react: ^7.33.1
     eslint-plugin-react-hooks: ^4.6.0
     highlight.js: ^11.8.0
-    markdown-it: ^13.0.1
+    markdown-it: ^13.0.2
     markdown-it-anchor: ^8.6.7
     markdown-it-footnote: ^3.0.3
     prettier: ^3.0.1
